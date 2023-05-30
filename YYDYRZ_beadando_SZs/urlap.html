@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="hu">
+
+<head>
+    <title> Űrlap </title>
+    <meta charset="UTF-8">
+
+    <style>
+        article, section, aside, nav, header, footer{
+            display: block;
+        }
+
+    
+
+    .urlap {
+        padding: 30px;
+        font-size: 12pt;
+        font-family: Helvetica;
+        background: #7ce5ff;
+        width: 500px;
+        height: 305px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #888888;
+    }
+
+    
+
+    h2 {
+			font-size: 24px;
+			margin-top: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(9, 134, 244);
+
+		}
+
+    footer {
+			background-color: #000000;
+			color: #ffffff;
+            font-size: 20px;
+			padding: 20px;
+			text-align: left;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		}  
+    
+        .button {
+  			background-color: #007ec7;
+  			border: none;
+ 			color: white;
+ 			padding: 12px 20px;
+ 			text-align: center;
+ 			text-decoration: none;
+  			display: inline-block;
+ 			font-size: 14px;
+ 			margin: 4px 2px;
+ 			cursor: pointer;
+		}
+
+		.button:hover {
+			background-color: #ba00cb;
+			color: #000000;
+			border-radius: 10px;
+		}    
+
+    </style>
+</head>
+
+<body>
+
+    <h2> Adja meg az alábbi adatokat és válaszoljon a kérdésekre! </h2> <br>
+
+    <section id="tartalom" class="urlap">
+
+    <form id="urlap" name="urlap"  method="get" target="_self">    
+
+        Név: <input type="text" id="nev" name="nev" placeholder="Írd be a neved" autofocus autocomplete="off">
+        <br><br>
+    
+        Életkor: <input type="number" name="eletkor" min="10" max="80" style="width: 40px" autocomplete="off"> <br><br>
+
+        Hangulata: &nbsp; &nbsp; &nbsp; <font style="color: rgb(0, 93, 99); font-weight: bold;">Szomorú</font> <input type="range" name="onbizalom" min="0" max="100" style="width: 250px;">
+        <font style="color: red; font-weight: bold;"> Vidám </font>  <br><br>
+
+
+        Melyik tantárgy érdekli leginkább? &nbsp; &nbsp; &nbsp; <input type="text" name="tantargy" list="tantargy">
+
+        <datalist id="tantargy">
+            <option value="Terepi műszerezés">  </option>
+            <option value="Villamosságtan I.">  </option>
+            <option value="Fizika II.">  </option>
+
+        </datalist>
+
+        <br><br>
+
+        Erre a kérdésre NEM-mel válaszol? (ne hazudjon) <br><br> 
+        <input type="radio" name="paradox" value="igen" id="igen" autocomplete="off"> <label for="igen"> Igen </label> <br>
+        <input type="radio" name="paradox" value="nem" id="nem"> <label for="nem"> Nem </label>
+
+        <br><br><br>
+
+        <input class="button" type="submit" value="Elküld" form="urlap" onclick="alert('Hazudott')">
+
+    </form>
+
+    <br><br><br>
+
+    
+
+    </section>
+
+    <br><br>
+
+    <footer>
+
+        Köszönöm, hogy kitöltötte!
+
+    </footer>
+</body>
+
+</html>
